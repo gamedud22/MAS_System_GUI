@@ -141,7 +141,7 @@ namespace MASSystemGUI {
 			// passwordLbl
 			// 
 			this->passwordLbl->AutoSize = true;
-			this->passwordLbl->Location = System::Drawing::Point(564, 379);
+			this->passwordLbl->Location = System::Drawing::Point(259, 313);
 			this->passwordLbl->Margin = System::Windows::Forms::Padding(10, 0, 10, 0);
 			this->passwordLbl->Name = L"passwordLbl";
 			this->passwordLbl->Size = System::Drawing::Size(158, 37);
@@ -151,7 +151,7 @@ namespace MASSystemGUI {
 			// UsernameLbl
 			// 
 			this->UsernameLbl->AutoSize = true;
-			this->UsernameLbl->Location = System::Drawing::Point(678, 234);
+			this->UsernameLbl->Location = System::Drawing::Point(253, 185);
 			this->UsernameLbl->Margin = System::Windows::Forms::Padding(10, 0, 10, 0);
 			this->UsernameLbl->Name = L"UsernameLbl";
 			this->UsernameLbl->Size = System::Drawing::Size(164, 37);
