@@ -113,9 +113,10 @@ namespace MASSystemGUI {
 			// 
 			// LoginBtn
 			// 
-			this->LoginBtn->Location = System::Drawing::Point(59, 168);
+			this->LoginBtn->Location = System::Drawing::Point(187, 478);
+			this->LoginBtn->Margin = System::Windows::Forms::Padding(10, 9, 10, 9);
 			this->LoginBtn->Name = L"LoginBtn";
-			this->LoginBtn->Size = System::Drawing::Size(101, 51);
+			this->LoginBtn->Size = System::Drawing::Size(320, 145);
 			this->LoginBtn->TabIndex = 0;
 			this->LoginBtn->Text = L"Login";
 			this->LoginBtn->UseVisualStyleBackColor = true;
@@ -123,46 +124,53 @@ namespace MASSystemGUI {
 			// 
 			// usernameBox
 			// 
-			this->usernameBox->Location = System::Drawing::Point(59, 81);
+			this->usernameBox->Location = System::Drawing::Point(187, 231);
+			this->usernameBox->Margin = System::Windows::Forms::Padding(10, 9, 10, 9);
 			this->usernameBox->Name = L"usernameBox";
-			this->usernameBox->Size = System::Drawing::Size(100, 20);
+			this->usernameBox->Size = System::Drawing::Size(308, 44);
 			this->usernameBox->TabIndex = 1;
 			// 
 			// passwrdBox
 			// 
-			this->passwrdBox->Location = System::Drawing::Point(59, 126);
+			this->passwrdBox->Location = System::Drawing::Point(187, 359);
+			this->passwrdBox->Margin = System::Windows::Forms::Padding(10, 9, 10, 9);
 			this->passwrdBox->Name = L"passwrdBox";
-			this->passwrdBox->Size = System::Drawing::Size(100, 20);
+			this->passwrdBox->Size = System::Drawing::Size(308, 44);
 			this->passwrdBox->TabIndex = 2;
 			// 
 			// passwordLbl
 			// 
 			this->passwordLbl->AutoSize = true;
-			this->passwordLbl->Location = System::Drawing::Point(178, 133);
+			this->passwordLbl->Location = System::Drawing::Point(564, 379);
+			this->passwordLbl->Margin = System::Windows::Forms::Padding(10, 0, 10, 0);
 			this->passwordLbl->Name = L"passwordLbl";
-			this->passwordLbl->Size = System::Drawing::Size(53, 13);
+			this->passwordLbl->Size = System::Drawing::Size(158, 37);
 			this->passwordLbl->TabIndex = 3;
 			this->passwordLbl->Text = L"Password";
 			// 
 			// UsernameLbl
 			// 
 			this->UsernameLbl->AutoSize = true;
-			this->UsernameLbl->Location = System::Drawing::Point(181, 84);
+			this->UsernameLbl->Location = System::Drawing::Point(678, 234);
+			this->UsernameLbl->Margin = System::Windows::Forms::Padding(10, 0, 10, 0);
 			this->UsernameLbl->Name = L"UsernameLbl";
-			this->UsernameLbl->Size = System::Drawing::Size(55, 13);
+			this->UsernameLbl->Size = System::Drawing::Size(164, 37);
 			this->UsernameLbl->TabIndex = 4;
 			this->UsernameLbl->Text = L"Username";
 			this->UsernameLbl->Click += gcnew System::EventHandler(this, &MyForm::label2_Click);
 			// 
 			// menuStrip1
 			// 
+			this->menuStrip1->GripMargin = System::Windows::Forms::Padding(2, 2, 0, 2);
+			this->menuStrip1->ImageScalingSize = System::Drawing::Size(48, 48);
 			this->menuStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(2) {
 				this->menuToolStripMenuItem,
 					this->exitToolStripMenuItem
 			});
 			this->menuStrip1->Location = System::Drawing::Point(0, 0);
 			this->menuStrip1->Name = L"menuStrip1";
-			this->menuStrip1->Size = System::Drawing::Size(334, 24);
+			this->menuStrip1->Padding = System::Windows::Forms::Padding(19, 6, 0, 6);
+			this->menuStrip1->Size = System::Drawing::Size(1102, 64);
 			this->menuStrip1->TabIndex = 5;
 			this->menuStrip1->Text = L"menuStrip1";
 			// 
@@ -173,58 +181,60 @@ namespace MASSystemGUI {
 					this->loginToolStripMenuItem, this->logsToolStripMenuItem
 			});
 			this->menuToolStripMenuItem->Name = L"menuToolStripMenuItem";
-			this->menuToolStripMenuItem->Size = System::Drawing::Size(50, 20);
+			this->menuToolStripMenuItem->Size = System::Drawing::Size(139, 52);
 			this->menuToolStripMenuItem->Text = L"Menu";
 			this->menuToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::menuToolStripMenuItem_Click);
 			// 
 			// resetToolStripMenuItem
 			// 
 			this->resetToolStripMenuItem->Name = L"resetToolStripMenuItem";
-			this->resetToolStripMenuItem->Size = System::Drawing::Size(104, 22);
+			this->resetToolStripMenuItem->Size = System::Drawing::Size(306, 66);
 			this->resetToolStripMenuItem->Text = L"Reset";
 			// 
 			// loginToolStripMenuItem
 			// 
 			this->loginToolStripMenuItem->Name = L"loginToolStripMenuItem";
-			this->loginToolStripMenuItem->Size = System::Drawing::Size(104, 22);
+			this->loginToolStripMenuItem->Size = System::Drawing::Size(306, 66);
 			this->loginToolStripMenuItem->Text = L"Login";
 			// 
 			// logsToolStripMenuItem
 			// 
 			this->logsToolStripMenuItem->Name = L"logsToolStripMenuItem";
-			this->logsToolStripMenuItem->Size = System::Drawing::Size(104, 22);
+			this->logsToolStripMenuItem->Size = System::Drawing::Size(306, 66);
 			this->logsToolStripMenuItem->Text = L"Logs";
 			// 
 			// exitToolStripMenuItem
 			// 
 			this->exitToolStripMenuItem->Name = L"exitToolStripMenuItem";
-			this->exitToolStripMenuItem->Size = System::Drawing::Size(38, 20);
+			this->exitToolStripMenuItem->Size = System::Drawing::Size(104, 52);
 			this->exitToolStripMenuItem->Text = L"Exit";
 			// 
 			// Title
 			// 
 			this->Title->AutoSize = true;
-			this->Title->Location = System::Drawing::Point(195, 24);
+			this->Title->Location = System::Drawing::Point(618, 68);
+			this->Title->Margin = System::Windows::Forms::Padding(10, 0, 10, 0);
 			this->Title->Name = L"Title";
 			this->Title->RightToLeft = System::Windows::Forms::RightToLeft::No;
-			this->Title->Size = System::Drawing::Size(127, 13);
+			this->Title->Size = System::Drawing::Size(378, 37);
 			this->Title->TabIndex = 6;
 			this->Title->Text = L"Welcome to MAS System";
 			// 
 			// ResetBtn
 			// 
-			this->ResetBtn->Location = System::Drawing::Point(181, 168);
+			this->ResetBtn->Location = System::Drawing::Point(573, 478);
+			this->ResetBtn->Margin = System::Windows::Forms::Padding(10, 9, 10, 9);
 			this->ResetBtn->Name = L"ResetBtn";
-			this->ResetBtn->Size = System::Drawing::Size(101, 51);
+			this->ResetBtn->Size = System::Drawing::Size(320, 145);
 			this->ResetBtn->TabIndex = 7;
 			this->ResetBtn->Text = L"Reset";
 			this->ResetBtn->UseVisualStyleBackColor = true;
 			// 
 			// MyForm
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
+			this->AutoScaleDimensions = System::Drawing::SizeF(19, 37);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(334, 253);
+			this->ClientSize = System::Drawing::Size(1102, 720);
 			this->Controls->Add(this->ResetBtn);
 			this->Controls->Add(this->Title);
 			this->Controls->Add(this->UsernameLbl);
@@ -234,6 +244,7 @@ namespace MASSystemGUI {
 			this->Controls->Add(this->LoginBtn);
 			this->Controls->Add(this->menuStrip1);
 			this->MainMenuStrip = this->menuStrip1;
+			this->Margin = System::Windows::Forms::Padding(10, 9, 10, 9);
 			this->Name = L"MyForm";
 			this->Text = L"MyForm";
 			this->menuStrip1->ResumeLayout(false);
