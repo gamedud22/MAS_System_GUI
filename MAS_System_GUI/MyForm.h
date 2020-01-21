@@ -151,7 +151,7 @@ namespace MASSystemGUI {
 			// UsernameLbl
 			// 
 			this->UsernameLbl->AutoSize = true;
-			this->UsernameLbl->Location = System::Drawing::Point(253, 185);
+			this->UsernameLbl->Location = System::Drawing::Point(281, 185);
 			this->UsernameLbl->Margin = System::Windows::Forms::Padding(10, 0, 10, 0);
 			this->UsernameLbl->Name = L"UsernameLbl";
 			this->UsernameLbl->Size = System::Drawing::Size(164, 37);
@@ -161,7 +161,6 @@ namespace MASSystemGUI {
 			// 
 			// menuStrip1
 			// 
-			this->menuStrip1->GripMargin = System::Windows::Forms::Padding(2, 2, 0, 2);
 			this->menuStrip1->ImageScalingSize = System::Drawing::Size(48, 48);
 			this->menuStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(2) {
 				this->menuToolStripMenuItem,
