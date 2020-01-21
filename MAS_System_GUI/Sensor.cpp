@@ -8,6 +8,6 @@ void SensorForm(array<String^>^ args) {
 	Application::EnableVisualStyles();
 	Application::SetCompatibleTextRenderingDefault(false);
 	//the name is the system  is the basic enrty app
-	MASSystemGUI::SensorForm sensor;
+	MASSystemGUI::Sensor sensor;
 	Application::Run(%sensor);
 }
