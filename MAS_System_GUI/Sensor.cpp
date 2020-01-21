@@ -9,6 +9,7 @@ void SensorForm(array<String^>^ args) {
 	Application::SetCompatibleTextRenderingDefault(false);
 	//the name is the system  is the basic enrty app
 	//this is a test edit 
+	//this is a test edit 
 	MASSystemGUI::Sensor sensor;
 	Application::Run(%sensor);
 }
