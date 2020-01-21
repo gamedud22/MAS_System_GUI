@@ -61,6 +61,7 @@ System::Void MASSystemGUI::MyForm::sqlFunction()
 			retCode = -1;
 			break;
 		default:
+			MyForm.show();
 			break;
 		}
 
