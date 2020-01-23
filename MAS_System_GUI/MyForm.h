@@ -34,6 +34,23 @@ namespace MASSystemGUI {
 				delete components;
 			}
 		}
+	private: System::Windows::Forms::Label^ userNamelbl;
+	private: System::Windows::Forms::Label^ passwordLbl;
+	private: System::Windows::Forms::TextBox^ userNameTxtb;
+	private: System::Windows::Forms::TextBox^ passwordTxtBox;
+	private: System::Windows::Forms::Button^ loginBtn;
+
+
+
+
+
+
+
+	protected:
+
+	protected:
+
+	protected:
 
 	private:
 		/// <summary>
@@ -48,12 +65,73 @@ namespace MASSystemGUI {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			this->components = gcnew System::ComponentModel::Container();
-			this->Size = System::Drawing::Size(300,300);
-			this->Text = L"MyForm";
-			this->Padding = System::Windows::Forms::Padding(0);
+			this->userNamelbl = (gcnew System::Windows::Forms::Label());
+			this->passwordLbl = (gcnew System::Windows::Forms::Label());
+			this->userNameTxtb = (gcnew System::Windows::Forms::TextBox());
+			this->passwordTxtBox = (gcnew System::Windows::Forms::TextBox());
+			this->loginBtn = (gcnew System::Windows::Forms::Button());
+			this->SuspendLayout();
+			// 
+			// userNamelbl
+			// 
+			this->userNamelbl->AutoSize = true;
+			this->userNamelbl->Location = System::Drawing::Point(33, 48);
+			this->userNamelbl->Name = L"userNamelbl";
+			this->userNamelbl->Size = System::Drawing::Size(55, 13);
+			this->userNamelbl->TabIndex = 0;
+			this->userNamelbl->Text = L"Username";
+			// 
+			// passwordLbl
+			// 
+			this->passwordLbl->AutoSize = true;
+			this->passwordLbl->Location = System::Drawing::Point(33, 96);
+			this->passwordLbl->Name = L"passwordLbl";
+			this->passwordLbl->Size = System::Drawing::Size(53, 13);
+			this->passwordLbl->TabIndex = 1;
+			this->passwordLbl->Text = L"Password";
+			// 
+			// userNameTxtb
+			// 
+			this->userNameTxtb->Location = System::Drawing::Point(36, 64);
+			this->userNameTxtb->Name = L"userNameTxtb";
+			this->userNameTxtb->Size = System::Drawing::Size(100, 20);
+			this->userNameTxtb->TabIndex = 2;
+			// 
+			// passwordTxtBox
+			// 
+			this->passwordTxtBox->Location = System::Drawing::Point(36, 112);
+			this->passwordTxtBox->Name = L"passwordTxtBox";
+			this->passwordTxtBox->Size = System::Drawing::Size(100, 20);
+			this->passwordTxtBox->TabIndex = 3;
+			// 
+			// loginBtn
+			// 
+			this->loginBtn->Location = System::Drawing::Point(163, 174);
+			this->loginBtn->Name = L"loginBtn";
+			this->loginBtn->Size = System::Drawing::Size(109, 34);
+			this->loginBtn->TabIndex = 4;
+			this->loginBtn->Text = L"Login";
+			this->loginBtn->UseVisualStyleBackColor = true;
+			this->loginBtn->Click += gcnew System::EventHandler(this, &MyForm::button1_Click);
+			// 
+			// MyForm
+			// 
+			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->ClientSize = System::Drawing::Size(284, 261);
+			this->Controls->Add(this->loginBtn);
+			this->Controls->Add(this->passwordTxtBox);
+			this->Controls->Add(this->userNameTxtb);
+			this->Controls->Add(this->passwordLbl);
+			this->Controls->Add(this->userNamelbl);
+			this->Name = L"MyForm";
+			this->Text = L"MyForm";
+			this->ResumeLayout(false);
+			this->PerformLayout();
+
 		}
 #pragma endregion
-	};
+	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+};
 }
