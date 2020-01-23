@@ -1,5 +1,9 @@
 #pragma once
-
+#include <Windows.h>
+#include <sqlext.h>
+#include <sql.h>
+#include <string>
+#include <sqltypes.h>
 namespace MASSystemGUI {
 
 	using namespace System;
