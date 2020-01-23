@@ -150,9 +150,6 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="MyForm.resx">
-      <DependentUpon>MyForm.h</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="PopupForm.resx">
       <DependentUpon>PopupForm.h</DependentUpon>
     </EmbeddedResource>

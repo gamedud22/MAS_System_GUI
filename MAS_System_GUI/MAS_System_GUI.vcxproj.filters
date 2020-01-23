@@ -26,13 +26,13 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="MyForm.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="PopupForm.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Sensor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MyForm.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
