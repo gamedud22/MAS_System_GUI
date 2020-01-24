@@ -5,6 +5,8 @@
 #include <string>
 #include <string>
 #include <sqltypes.h>
+#include "loginLogs.h"
+#include "MyForm.h"
 
 namespace MASSystemGUI {
 
@@ -365,7 +367,10 @@ private: System::Void label2_Click(System::Object^ sender, System::EventArgs^ e)
 }
 private: System::Void loginToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
 	//open login log form
-
+	loginLogs lLogs;
+	this->Hide();
+	lLogs.Show();
+	this->Close();
 }
 private: System::Void sensorToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
 	//open sensor log form
@@ -378,8 +383,6 @@ private: System::Void resetToolStripMenuItem_Click(System::Object^ sender, Syste
 }
 private: System::Void logoutToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
 	//log out function
-	this->Hide();
-	this->Close();
 }
 };
 }
