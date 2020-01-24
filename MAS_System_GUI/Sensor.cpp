@@ -13,3 +13,10 @@ void SensorForm(array<String^>^ args) {
 	MASSystemGUI::Sensor sensor;
 	Application::Run(%sensor);
 }
+
+void closefunction()
+{
+	MASSystemGUI::Sensor sensor;
+	sensor.Hide();
+	sensor.Close();
+}

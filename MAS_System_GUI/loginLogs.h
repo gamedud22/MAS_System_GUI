@@ -40,6 +40,7 @@ namespace MASSystemGUI {
 	private: System::Windows::Forms::ToolStripMenuItem^ logsToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^ logoutToolStripMenuItem;
 	private: System::Windows::Forms::Button^ PlaceHolder;
+	private: System::Windows::Forms::Label^ label1;
 
 	private:
 		/// <summary>
@@ -59,6 +60,7 @@ namespace MASSystemGUI {
 			this->logsToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->logoutToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->PlaceHolder = (gcnew System::Windows::Forms::Button());
+			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->menuStrip1->SuspendLayout();
 			this->SuspendLayout();
 			// 
@@ -103,11 +105,21 @@ namespace MASSystemGUI {
 			this->PlaceHolder->Text = L"button1";
 			this->PlaceHolder->UseVisualStyleBackColor = true;
 			// 
+			// label1
+			// 
+			this->label1->AutoSize = true;
+			this->label1->Location = System::Drawing::Point(886, 83);
+			this->label1->Name = L"label1";
+			this->label1->Size = System::Drawing::Size(100, 37);
+			this->label1->TabIndex = 2;
+			this->label1->Text = L"label1";
+			// 
 			// loginLogs
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(19, 37);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1003, 638);
+			this->Controls->Add(this->label1);
 			this->Controls->Add(this->PlaceHolder);
 			this->Controls->Add(this->menuStrip1);
 			this->MainMenuStrip = this->menuStrip1;

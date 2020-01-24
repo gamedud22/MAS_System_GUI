@@ -356,8 +356,9 @@ namespace MASSystemGUI {
 	private: System::Void loginToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
 		//open login log form
 		loginLogs loginLogsForm;
-		loginLogsForm.Show();
 		this->Hide();
+		loginLogsForm.ShowDialog();
+		this->Close();
 	}
 	private: System::Void sensorToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
 		//open sensor log form
