@@ -27,6 +27,12 @@
     <ClCompile Include="loginLogs.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="sensorForm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="alarmLog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="PopupForm.h">
@@ -39,6 +45,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="loginLogs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sensorForm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="alarmLog.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

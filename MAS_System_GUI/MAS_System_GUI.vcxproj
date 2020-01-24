@@ -135,12 +135,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="alarmLog.cpp" />
     <ClCompile Include="loginLogs.cpp" />
     <ClCompile Include="MyForm.cpp" />
     <ClCompile Include="PopupForm1.cpp" />
     <ClCompile Include="Sensor.cpp" />
+    <ClCompile Include="sensorForm.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="alarmLog.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="loginLogs.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -151,6 +156,9 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="Sensor.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="sensorForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
   </ItemGroup>
