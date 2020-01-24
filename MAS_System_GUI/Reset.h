@@ -34,6 +34,10 @@ namespace MASSystemGUI {
 				delete components;
 			}
 		}
+	private: System::Windows::Forms::Label^ resetLbl;
+	private: System::Windows::Forms::Button^ resetBtn;
+	private: System::Windows::Forms::Button^ cancelResetBtn;
+	protected:
 
 	private:
 		/// <summary>
@@ -48,11 +52,51 @@ namespace MASSystemGUI {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			this->components = gcnew System::ComponentModel::Container();
-			this->Size = System::Drawing::Size(300,300);
-			this->Text = L"Reset";
-			this->Padding = System::Windows::Forms::Padding(0);
+			this->resetLbl = (gcnew System::Windows::Forms::Label());
+			this->resetBtn = (gcnew System::Windows::Forms::Button());
+			this->cancelResetBtn = (gcnew System::Windows::Forms::Button());
+			this->SuspendLayout();
+			// 
+			// resetLbl
+			// 
+			this->resetLbl->AutoSize = true;
+			this->resetLbl->Location = System::Drawing::Point(38, 24);
+			this->resetLbl->Name = L"resetLbl";
+			this->resetLbl->Size = System::Drawing::Size(177, 13);
+			this->resetLbl->TabIndex = 0;
+			this->resetLbl->Text = L"You would like to reset the sensors\?";
+			// 
+			// resetBtn
+			// 
+			this->resetBtn->Location = System::Drawing::Point(161, 97);
+			this->resetBtn->Name = L"resetBtn";
+			this->resetBtn->Size = System::Drawing::Size(75, 23);
+			this->resetBtn->TabIndex = 1;
+			this->resetBtn->Text = L"Reset";
+			this->resetBtn->UseVisualStyleBackColor = true;
+			// 
+			// cancelResetBtn
+			// 
+			this->cancelResetBtn->Location = System::Drawing::Point(41, 97);
+			this->cancelResetBtn->Name = L"cancelResetBtn";
+			this->cancelResetBtn->Size = System::Drawing::Size(75, 23);
+			this->cancelResetBtn->TabIndex = 2;
+			this->cancelResetBtn->Text = L"Cancel";
+			this->cancelResetBtn->UseVisualStyleBackColor = true;
+			// 
+			// Reset
+			// 
+			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->ClientSize = System::Drawing::Size(290, 139);
+			this->Controls->Add(this->cancelResetBtn);
+			this->Controls->Add(this->resetBtn);
+			this->Controls->Add(this->resetLbl);
+			this->Name = L"Reset";
+			this->Text = L"Reset";
+			this->ResumeLayout(false);
+			this->PerformLayout();
+
 		}
 #pragma endregion
 	};
