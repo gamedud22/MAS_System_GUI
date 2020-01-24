@@ -42,6 +42,7 @@ namespace MASSystemGUI {
 	private: System::Windows::Forms::TextBox^ userNameTxtb;
 	private: System::Windows::Forms::TextBox^ passwordTxtBox;
 	private: System::Windows::Forms::Button^ loginBtn;
+	private: System::Windows::Forms::Button^ resetBtn;
 
 
 
@@ -73,6 +74,7 @@ namespace MASSystemGUI {
 			this->userNameTxtb = (gcnew System::Windows::Forms::TextBox());
 			this->passwordTxtBox = (gcnew System::Windows::Forms::TextBox());
 			this->loginBtn = (gcnew System::Windows::Forms::Button());
+			this->resetBtn = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
 			// 
 			// userNamelbl
@@ -117,11 +119,21 @@ namespace MASSystemGUI {
 			this->loginBtn->UseVisualStyleBackColor = true;
 			this->loginBtn->Click += gcnew System::EventHandler(this, &MyForm::button1_Click);
 			// 
+			// resetBtn
+			// 
+			this->resetBtn->Location = System::Drawing::Point(26, 174);
+			this->resetBtn->Name = L"resetBtn";
+			this->resetBtn->Size = System::Drawing::Size(96, 34);
+			this->resetBtn->TabIndex = 5;
+			this->resetBtn->Text = L"Reset";
+			this->resetBtn->UseVisualStyleBackColor = true;
+			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(284, 261);
+			this->Controls->Add(this->resetBtn);
 			this->Controls->Add(this->loginBtn);
 			this->Controls->Add(this->passwordTxtBox);
 			this->Controls->Add(this->userNameTxtb);
