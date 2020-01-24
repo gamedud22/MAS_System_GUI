@@ -27,10 +27,10 @@
     <ClCompile Include="loginLogs.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="sensorForm.cpp">
+    <ClCompile Include="alarmLog.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="alarmLog.cpp">
+    <ClCompile Include="sensorLog.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -47,10 +47,10 @@
     <ClInclude Include="loginLogs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="sensorForm.h">
+    <ClInclude Include="alarmLog.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="alarmLog.h">
+    <ClInclude Include="sensorLog.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
