@@ -5,6 +5,7 @@
 #include <string>
 #include <string>
 #include <sqltypes.h>
+#include "loginLogs.h"
 
 namespace MASSystemGUI {
 
@@ -197,6 +198,7 @@ namespace MASSystemGUI {
 			// 
 			// menuStrip1
 			// 
+			this->menuStrip1->GripMargin = System::Windows::Forms::Padding(2, 2, 0, 2);
 			this->menuStrip1->ImageScalingSize = System::Drawing::Size(48, 48);
 			this->menuStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(3) {
 				this->editToolStripMenuItem,
@@ -205,7 +207,7 @@ namespace MASSystemGUI {
 			this->menuStrip1->Location = System::Drawing::Point(0, 0);
 			this->menuStrip1->Name = L"menuStrip1";
 			this->menuStrip1->Padding = System::Windows::Forms::Padding(19, 6, 0, 6);
-			this->menuStrip1->Size = System::Drawing::Size(1488, 69);
+			this->menuStrip1->Size = System::Drawing::Size(1488, 64);
 			this->menuStrip1->TabIndex = 9;
 			this->menuStrip1->Text = L"menuStrip1";
 			// 
@@ -216,7 +218,7 @@ namespace MASSystemGUI {
 					this->userToolStripMenuItem
 			});
 			this->editToolStripMenuItem->Name = L"editToolStripMenuItem";
-			this->editToolStripMenuItem->Size = System::Drawing::Size(108, 57);
+			this->editToolStripMenuItem->Size = System::Drawing::Size(108, 52);
 			this->editToolStripMenuItem->Text = L"Edit";
 			// 
 			// thresholdToolStripMenuItem
@@ -238,34 +240,34 @@ namespace MASSystemGUI {
 					this->loginToolStripMenuItem, this->alarmToolStripMenuItem
 			});
 			this->logsToolStripMenuItem->Name = L"logsToolStripMenuItem";
-			this->logsToolStripMenuItem->Size = System::Drawing::Size(122, 57);
+			this->logsToolStripMenuItem->Size = System::Drawing::Size(122, 52);
 			this->logsToolStripMenuItem->Text = L"Logs";
 			// 
 			// sensorToolStripMenuItem
 			// 
 			this->sensorToolStripMenuItem->Name = L"sensorToolStripMenuItem";
-			this->sensorToolStripMenuItem->Size = System::Drawing::Size(538, 66);
+			this->sensorToolStripMenuItem->Size = System::Drawing::Size(325, 66);
 			this->sensorToolStripMenuItem->Text = L"Sensor";
 			this->sensorToolStripMenuItem->Click += gcnew System::EventHandler(this, &Sensor::sensorToolStripMenuItem_Click);
 			// 
 			// loginToolStripMenuItem
 			// 
 			this->loginToolStripMenuItem->Name = L"loginToolStripMenuItem";
-			this->loginToolStripMenuItem->Size = System::Drawing::Size(538, 66);
+			this->loginToolStripMenuItem->Size = System::Drawing::Size(325, 66);
 			this->loginToolStripMenuItem->Text = L"Login";
 			this->loginToolStripMenuItem->Click += gcnew System::EventHandler(this, &Sensor::loginToolStripMenuItem_Click);
 			// 
 			// alarmToolStripMenuItem
 			// 
 			this->alarmToolStripMenuItem->Name = L"alarmToolStripMenuItem";
-			this->alarmToolStripMenuItem->Size = System::Drawing::Size(538, 66);
+			this->alarmToolStripMenuItem->Size = System::Drawing::Size(325, 66);
 			this->alarmToolStripMenuItem->Text = L"Alarm";
 			this->alarmToolStripMenuItem->Click += gcnew System::EventHandler(this, &Sensor::alarmToolStripMenuItem_Click);
 			// 
 			// resetToolStripMenuItem
 			// 
 			this->resetToolStripMenuItem->Name = L"resetToolStripMenuItem";
-			this->resetToolStripMenuItem->Size = System::Drawing::Size(134, 57);
+			this->resetToolStripMenuItem->Size = System::Drawing::Size(134, 52);
 			this->resetToolStripMenuItem->Text = L"Reset";
 			this->resetToolStripMenuItem->Click += gcnew System::EventHandler(this, &Sensor::resetToolStripMenuItem_Click);
 			// 
@@ -318,6 +320,7 @@ namespace MASSystemGUI {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(19, 37);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->AutoSize = true;
 			this->ClientSize = System::Drawing::Size(1488, 1042);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->label1);
@@ -333,6 +336,7 @@ namespace MASSystemGUI {
 			this->Controls->Add(this->tempThreshLbl);
 			this->Controls->Add(this->TempLvl);
 			this->Controls->Add(this->menuStrip1);
+			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedDialog;
 			this->MainMenuStrip = this->menuStrip1;
 			this->Margin = System::Windows::Forms::Padding(10, 9, 10, 9);
 			this->Name = L"Sensor";
@@ -351,6 +355,9 @@ namespace MASSystemGUI {
 	}
 	private: System::Void loginToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
 		//open login log form
+		loginLogs loginLogsForm;
+		loginLogsForm.Show();
+		this->Hide();
 	}
 	private: System::Void sensorToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
 		//open sensor log form
