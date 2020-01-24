@@ -67,6 +67,9 @@ namespace MASSystemGUI {
 	private: System::Windows::Forms::TextBox^ textBox4;
 	private: System::Windows::Forms::Label^ label1;
 	private: System::Windows::Forms::Label^ label2;
+	private: System::Windows::Forms::ToolStripMenuItem^ logsToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^ sensorToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^ loginToolStripMenuItem;
 
 
 
@@ -101,102 +104,108 @@ namespace MASSystemGUI {
 			this->tempThreshTxt = (gcnew System::Windows::Forms::TextBox());
 			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
 			this->menuStrip1 = (gcnew System::Windows::Forms::MenuStrip());
-			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
 			this->editToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->thresholdToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->userToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->resetToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox4 = (gcnew System::Windows::Forms::TextBox());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->label2 = (gcnew System::Windows::Forms::Label());
+			this->logsToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->sensorToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->loginToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->menuStrip1->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// TempLvl
 			// 
 			this->TempLvl->AutoSize = true;
-			this->TempLvl->Location = System::Drawing::Point(13, 41);
+			this->TempLvl->Location = System::Drawing::Point(41, 117);
+			this->TempLvl->Margin = System::Windows::Forms::Padding(10, 0, 10, 0);
 			this->TempLvl->Name = L"TempLvl";
-			this->TempLvl->Size = System::Drawing::Size(87, 13);
+			this->TempLvl->Size = System::Drawing::Size(255, 37);
 			this->TempLvl->TabIndex = 0;
 			this->TempLvl->Text = L"Temputure Level";
 			// 
 			// tempThreshLbl
 			// 
 			this->tempThreshLbl->AutoSize = true;
-			this->tempThreshLbl->Location = System::Drawing::Point(212, 41);
+			this->tempThreshLbl->Location = System::Drawing::Point(671, 117);
+			this->tempThreshLbl->Margin = System::Windows::Forms::Padding(10, 0, 10, 0);
 			this->tempThreshLbl->Name = L"tempThreshLbl";
-			this->tempThreshLbl->Size = System::Drawing::Size(117, 13);
+			this->tempThreshLbl->Size = System::Drawing::Size(352, 37);
 			this->tempThreshLbl->TabIndex = 1;
 			this->tempThreshLbl->Text = L"Temperature Threshold";
 			// 
 			// HumityLbl
 			// 
 			this->HumityLbl->AutoSize = true;
-			this->HumityLbl->Location = System::Drawing::Point(13, 104);
+			this->HumityLbl->Location = System::Drawing::Point(41, 296);
+			this->HumityLbl->Margin = System::Windows::Forms::Padding(10, 0, 10, 0);
 			this->HumityLbl->Name = L"HumityLbl";
-			this->HumityLbl->Size = System::Drawing::Size(68, 13);
+			this->HumityLbl->Size = System::Drawing::Size(199, 37);
 			this->HumityLbl->TabIndex = 2;
 			this->HumityLbl->Text = L"Humity Level";
 			// 
 			// HumityThreshLbl
 			// 
 			this->HumityThreshLbl->AutoSize = true;
-			this->HumityThreshLbl->Location = System::Drawing::Point(212, 104);
+			this->HumityThreshLbl->Location = System::Drawing::Point(671, 296);
+			this->HumityThreshLbl->Margin = System::Windows::Forms::Padding(10, 0, 10, 0);
 			this->HumityThreshLbl->Name = L"HumityThreshLbl";
-			this->HumityThreshLbl->Size = System::Drawing::Size(95, 13);
+			this->HumityThreshLbl->Size = System::Drawing::Size(268, 37);
 			this->HumityThreshLbl->TabIndex = 3;
-			this->HumityThreshLbl->Text = L"Humity Threshhold";
+			this->HumityThreshLbl->Text = L"Humity Threshold";
 			// 
 			// tempLvlTxt
 			// 
-			this->tempLvlTxt->Location = System::Drawing::Point(106, 41);
+			this->tempLvlTxt->Location = System::Drawing::Point(336, 117);
+			this->tempLvlTxt->Margin = System::Windows::Forms::Padding(10, 9, 10, 9);
 			this->tempLvlTxt->Name = L"tempLvlTxt";
-			this->tempLvlTxt->Size = System::Drawing::Size(100, 20);
+			this->tempLvlTxt->Size = System::Drawing::Size(308, 44);
 			this->tempLvlTxt->TabIndex = 4;
 			// 
 			// progressBar2
 			// 
-			this->progressBar2->Location = System::Drawing::Point(309, 280);
+			this->progressBar2->Location = System::Drawing::Point(979, 797);
+			this->progressBar2->Margin = System::Windows::Forms::Padding(10, 9, 10, 9);
 			this->progressBar2->Name = L"progressBar2";
-			this->progressBar2->Size = System::Drawing::Size(100, 23);
+			this->progressBar2->Size = System::Drawing::Size(317, 65);
 			this->progressBar2->TabIndex = 6;
 			// 
 			// tempThreshTxt
 			// 
-			this->tempThreshTxt->Location = System::Drawing::Point(335, 34);
+			this->tempThreshTxt->Location = System::Drawing::Point(1061, 97);
+			this->tempThreshTxt->Margin = System::Windows::Forms::Padding(10, 9, 10, 9);
 			this->tempThreshTxt->Name = L"tempThreshTxt";
-			this->tempThreshTxt->Size = System::Drawing::Size(100, 20);
+			this->tempThreshTxt->Size = System::Drawing::Size(308, 44);
 			this->tempThreshTxt->TabIndex = 7;
 			this->tempThreshTxt->Text = L" 60.00 F";
 			this->tempThreshTxt->TextChanged += gcnew System::EventHandler(this, &Sensor::textBox2_TextChanged);
 			// 
 			// textBox1
 			// 
-			this->textBox1->Location = System::Drawing::Point(335, 97);
+			this->textBox1->Location = System::Drawing::Point(1061, 276);
+			this->textBox1->Margin = System::Windows::Forms::Padding(10, 9, 10, 9);
 			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(100, 20);
+			this->textBox1->Size = System::Drawing::Size(308, 44);
 			this->textBox1->TabIndex = 8;
 			// 
 			// menuStrip1
 			// 
-			this->menuStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(2) {
+			this->menuStrip1->ImageScalingSize = System::Drawing::Size(48, 48);
+			this->menuStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(3) {
 				this->editToolStripMenuItem,
-					this->resetToolStripMenuItem
+					this->logsToolStripMenuItem, this->resetToolStripMenuItem
 			});
 			this->menuStrip1->Location = System::Drawing::Point(0, 0);
 			this->menuStrip1->Name = L"menuStrip1";
-			this->menuStrip1->Size = System::Drawing::Size(470, 24);
+			this->menuStrip1->Padding = System::Windows::Forms::Padding(19, 6, 0, 6);
+			this->menuStrip1->Size = System::Drawing::Size(1488, 69);
 			this->menuStrip1->TabIndex = 9;
 			this->menuStrip1->Text = L"menuStrip1";
-			// 
-			// textBox2
-			// 
-			this->textBox2->Location = System::Drawing::Point(106, 101);
-			this->textBox2->Name = L"textBox2";
-			this->textBox2->Size = System::Drawing::Size(100, 20);
-			this->textBox2->TabIndex = 10;
 			// 
 			// editToolStripMenuItem
 			// 
@@ -205,64 +214,99 @@ namespace MASSystemGUI {
 					this->userToolStripMenuItem
 			});
 			this->editToolStripMenuItem->Name = L"editToolStripMenuItem";
-			this->editToolStripMenuItem->Size = System::Drawing::Size(39, 20);
+			this->editToolStripMenuItem->Size = System::Drawing::Size(108, 52);
 			this->editToolStripMenuItem->Text = L"Edit";
 			// 
 			// thresholdToolStripMenuItem
 			// 
 			this->thresholdToolStripMenuItem->Name = L"thresholdToolStripMenuItem";
-			this->thresholdToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->thresholdToolStripMenuItem->Size = System::Drawing::Size(375, 66);
 			this->thresholdToolStripMenuItem->Text = L"Threshold";
 			// 
 			// userToolStripMenuItem
 			// 
 			this->userToolStripMenuItem->Name = L"userToolStripMenuItem";
-			this->userToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->userToolStripMenuItem->Size = System::Drawing::Size(375, 66);
 			this->userToolStripMenuItem->Text = L"User";
 			// 
 			// resetToolStripMenuItem
 			// 
 			this->resetToolStripMenuItem->Name = L"resetToolStripMenuItem";
-			this->resetToolStripMenuItem->Size = System::Drawing::Size(47, 20);
+			this->resetToolStripMenuItem->Size = System::Drawing::Size(134, 52);
 			this->resetToolStripMenuItem->Text = L"Reset";
+			// 
+			// textBox2
+			// 
+			this->textBox2->Location = System::Drawing::Point(336, 287);
+			this->textBox2->Margin = System::Windows::Forms::Padding(10, 9, 10, 9);
+			this->textBox2->Name = L"textBox2";
+			this->textBox2->Size = System::Drawing::Size(308, 44);
+			this->textBox2->TabIndex = 10;
 			// 
 			// textBox3
 			// 
-			this->textBox3->Location = System::Drawing::Point(106, 160);
+			this->textBox3->Location = System::Drawing::Point(336, 455);
+			this->textBox3->Margin = System::Windows::Forms::Padding(10, 9, 10, 9);
 			this->textBox3->Name = L"textBox3";
-			this->textBox3->Size = System::Drawing::Size(100, 20);
+			this->textBox3->Size = System::Drawing::Size(308, 44);
 			this->textBox3->TabIndex = 11;
 			// 
 			// textBox4
 			// 
-			this->textBox4->Location = System::Drawing::Point(335, 160);
+			this->textBox4->Location = System::Drawing::Point(1061, 455);
+			this->textBox4->Margin = System::Windows::Forms::Padding(10, 9, 10, 9);
 			this->textBox4->Name = L"textBox4";
-			this->textBox4->Size = System::Drawing::Size(100, 20);
+			this->textBox4->Size = System::Drawing::Size(308, 44);
 			this->textBox4->TabIndex = 12;
 			// 
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->Location = System::Drawing::Point(16, 166);
+			this->label1->Location = System::Drawing::Point(51, 472);
+			this->label1->Margin = System::Windows::Forms::Padding(10, 0, 10, 0);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(35, 13);
+			this->label1->Size = System::Drawing::Size(199, 37);
 			this->label1->TabIndex = 13;
-			this->label1->Text = L"label1";
+			this->label1->Text = L"Smoke Level";
 			// 
 			// label2
 			// 
 			this->label2->AutoSize = true;
-			this->label2->Location = System::Drawing::Point(212, 163);
+			this->label2->Location = System::Drawing::Point(671, 464);
+			this->label2->Margin = System::Windows::Forms::Padding(10, 0, 10, 0);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(35, 13);
+			this->label2->Size = System::Drawing::Size(268, 37);
 			this->label2->TabIndex = 14;
-			this->label2->Text = L"label2";
+			this->label2->Text = L"Smoke Threshold";
+			this->label2->Click += gcnew System::EventHandler(this, &Sensor::label2_Click);
+			// 
+			// logsToolStripMenuItem
+			// 
+			this->logsToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(2) {
+				this->sensorToolStripMenuItem,
+					this->loginToolStripMenuItem
+			});
+			this->logsToolStripMenuItem->Name = L"logsToolStripMenuItem";
+			this->logsToolStripMenuItem->Size = System::Drawing::Size(122, 52);
+			this->logsToolStripMenuItem->Text = L"Logs";
+			// 
+			// sensorToolStripMenuItem
+			// 
+			this->sensorToolStripMenuItem->Name = L"sensorToolStripMenuItem";
+			this->sensorToolStripMenuItem->Size = System::Drawing::Size(538, 66);
+			this->sensorToolStripMenuItem->Text = L"Sensor";
+			// 
+			// loginToolStripMenuItem
+			// 
+			this->loginToolStripMenuItem->Name = L"loginToolStripMenuItem";
+			this->loginToolStripMenuItem->Size = System::Drawing::Size(538, 66);
+			this->loginToolStripMenuItem->Text = L"Login";
 			// 
 			// Sensor
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
+			this->AutoScaleDimensions = System::Drawing::SizeF(19, 37);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(470, 366);
+			this->ClientSize = System::Drawing::Size(1488, 1042);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->textBox4);
@@ -278,6 +322,7 @@ namespace MASSystemGUI {
 			this->Controls->Add(this->TempLvl);
 			this->Controls->Add(this->menuStrip1);
 			this->MainMenuStrip = this->menuStrip1;
+			this->Margin = System::Windows::Forms::Padding(10, 9, 10, 9);
 			this->Name = L"Sensor";
 			this->Text = L"Sensor";
 			this->menuStrip1->ResumeLayout(false);
@@ -290,5 +335,7 @@ namespace MASSystemGUI {
 	}
 
 
+private: System::Void label2_Click(System::Object^ sender, System::EventArgs^ e) {
+}
 };
 }
