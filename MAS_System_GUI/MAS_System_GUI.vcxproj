@@ -139,6 +139,7 @@
     <ClCompile Include="loginLogs.cpp" />
     <ClCompile Include="MyForm.cpp" />
     <ClCompile Include="PopupForm1.cpp" />
+    <ClCompile Include="Reset.cpp" />
     <ClCompile Include="Sensor.cpp" />
     <ClCompile Include="sensorLog.cpp" />
   </ItemGroup>
@@ -153,6 +154,9 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="PopupForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Reset.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="Sensor.h">
