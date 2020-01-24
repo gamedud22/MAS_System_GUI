@@ -24,6 +24,9 @@
     <ClCompile Include="Sensor.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="loginLogs.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="PopupForm.h">
@@ -33,6 +36,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="MyForm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="loginLogs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

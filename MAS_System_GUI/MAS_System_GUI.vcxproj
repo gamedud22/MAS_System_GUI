@@ -135,11 +135,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="loginLogs.cpp" />
     <ClCompile Include="MyForm.cpp" />
     <ClCompile Include="PopupForm1.cpp" />
     <ClCompile Include="Sensor.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="loginLogs.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="MyForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
