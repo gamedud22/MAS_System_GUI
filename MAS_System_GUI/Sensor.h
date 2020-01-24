@@ -257,7 +257,6 @@ namespace MASSystemGUI {
 			this->label2->Size = System::Drawing::Size(35, 13);
 			this->label2->TabIndex = 14;
 			this->label2->Text = L"label2";
-			this->label2->Click += gcnew System::EventHandler(this, &Sensor::label2_Click);
 			// 
 			// Sensor
 			// 
