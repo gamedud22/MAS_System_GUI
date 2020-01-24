@@ -125,13 +125,15 @@ namespace MASSystemGUI {
 			this->Controls->Add(this->passwordLbl);
 			this->Controls->Add(this->userNamelbl);
 			this->Name = L"MyForm";
-			this->Text = L"MyForm";
+			this->Text = L"MAS System";
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
 		}
 #pragma endregion
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+		//sql check function 
+		
 	}
 };
 }
