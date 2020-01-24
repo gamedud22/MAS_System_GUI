@@ -74,6 +74,7 @@ namespace MASSystemGUI {
 			this->resetBtn->TabIndex = 1;
 			this->resetBtn->Text = L"Reset";
 			this->resetBtn->UseVisualStyleBackColor = true;
+			this->resetBtn->Click += gcnew System::EventHandler(this, &Reset::resetBtn_Click);
 			// 
 			// cancelResetBtn
 			// 
@@ -99,5 +100,8 @@ namespace MASSystemGUI {
 
 		}
 #pragma endregion
+	private: System::Void resetBtn_Click(System::Object^ sender, System::EventArgs^ e) {
+		
+	}
 	};
 }

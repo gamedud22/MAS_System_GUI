@@ -2,7 +2,7 @@
 #include <Windows.h>
 #include "PopupForm.h"
 #include "Sensor.h"
-
+#include "Reset.h"
 namespace MASSystemGUI {
 
 	using namespace System;
@@ -130,6 +130,7 @@ namespace MASSystemGUI {
 			this->resetBtn->TabIndex = 5;
 			this->resetBtn->Text = L"Reset";
 			this->resetBtn->UseVisualStyleBackColor = true;
+			this->resetBtn->Click += gcnew System::EventHandler(this, &MyForm::resetBtn_Click);
 			// 
 			// MyForm
 			// 
@@ -170,5 +171,10 @@ namespace MASSystemGUI {
 		}
 	*/
 	}
+private: System::Void resetBtn_Click(System::Object^ sender, System::EventArgs^ e) 
+{
+	Reset resetForm;
+	resetForm.Show();
+}
 };
 }
