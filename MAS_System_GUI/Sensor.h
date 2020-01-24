@@ -3,6 +3,7 @@
 #include <sqlext.h>
 #include <sql.h>
 #include <string>
+#include <string>
 #include <sqltypes.h>
 
 namespace MASSystemGUI {
@@ -20,15 +21,20 @@ namespace MASSystemGUI {
 	public ref class Sensor : public System::Windows::Forms::Form
 	{
 	public:
+		
 		Sensor(void)
 		{
 			InitializeComponent();
 			//
 			//TODO: Add the constructor code here
-			//
+			// load the sensors thresh from the sql 
+			tempThreshTxt->Text = tempThreshTxt->Text + " ";
+
+			
 		}
 
 	protected:
+		
 		/// <summary>
 		/// Clean up any resources being used.
 		/// </summary>
@@ -44,7 +50,14 @@ namespace MASSystemGUI {
 
 	private: System::Windows::Forms::Label^ HumityLbl;
 	private: System::Windows::Forms::Label^ HumityThreshLbl;
-	private: System::Windows::Forms::TextBox^ textBox1;
+	private: System::Windows::Forms::TextBox^ tempLvlTxt;
+
+	private: System::Windows::Forms::ProgressBar^ progressBar1;
+	private: System::Windows::Forms::ProgressBar^ progressBar2;
+	private: System::Windows::Forms::Timer^ timer1;
+	private: System::Windows::Forms::TextBox^ tempThreshTxt;
+
+	private: System::ComponentModel::IContainer^ components;
 
 	protected:
 
@@ -54,7 +67,7 @@ namespace MASSystemGUI {
 		/// <summary>
 		/// Required designer variable.
 		/// </summary>
-		System::ComponentModel::Container^ components;
+
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -63,11 +76,16 @@ namespace MASSystemGUI {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			this->components = (gcnew System::ComponentModel::Container());
 			this->TempLvl = (gcnew System::Windows::Forms::Label());
 			this->tempThreshLbl = (gcnew System::Windows::Forms::Label());
 			this->HumityLbl = (gcnew System::Windows::Forms::Label());
 			this->HumityThreshLbl = (gcnew System::Windows::Forms::Label());
-			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
+			this->tempLvlTxt = (gcnew System::Windows::Forms::TextBox());
+			this->progressBar1 = (gcnew System::Windows::Forms::ProgressBar());
+			this->progressBar2 = (gcnew System::Windows::Forms::ProgressBar());
+			this->timer1 = (gcnew System::Windows::Forms::Timer(this->components));
+			this->tempThreshTxt = (gcnew System::Windows::Forms::TextBox());
 			this->SuspendLayout();
 			// 
 			// TempLvl
@@ -78,16 +96,15 @@ namespace MASSystemGUI {
 			this->TempLvl->Size = System::Drawing::Size(87, 13);
 			this->TempLvl->TabIndex = 0;
 			this->TempLvl->Text = L"Temputure Level";
-
 			// 
 			// tempThreshLbl
 			// 
 			this->tempThreshLbl->AutoSize = true;
-			this->tempThreshLbl->Location = System::Drawing::Point(169, 41);
+			this->tempThreshLbl->Location = System::Drawing::Point(212, 41);
 			this->tempThreshLbl->Name = L"tempThreshLbl";
 			this->tempThreshLbl->Size = System::Drawing::Size(105, 13);
 			this->tempThreshLbl->TabIndex = 1;
-			this->tempThreshLbl->Text = L"Temputer Threshold ";
+			this->tempThreshLbl->Text = L"Temperature Threshold";
 			// 
 			// HumityLbl
 			// 
@@ -97,7 +114,6 @@ namespace MASSystemGUI {
 			this->HumityLbl->Size = System::Drawing::Size(68, 13);
 			this->HumityLbl->TabIndex = 2;
 			this->HumityLbl->Text = L"Humity Level";
-
 			// 
 			// HumityThreshLbl
 			// 
@@ -108,19 +124,45 @@ namespace MASSystemGUI {
 			this->HumityThreshLbl->TabIndex = 3;
 			this->HumityThreshLbl->Text = L"Humity Threshhold";
 			// 
-			// textBox1
+			// tempLvlTxt
 			// 
-			this->textBox1->Location = System::Drawing::Point(32, 75);
-			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(100, 20);
-			this->textBox1->TabIndex = 4;
+			this->tempLvlTxt->Location = System::Drawing::Point(106, 41);
+			this->tempLvlTxt->Name = L"tempLvlTxt";
+			this->tempLvlTxt->Size = System::Drawing::Size(100, 20);
+			this->tempLvlTxt->TabIndex = 4;
+			// 
+			// progressBar1
+			// 
+			this->progressBar1->Location = System::Drawing::Point(167, 88);
+			this->progressBar1->Name = L"progressBar1";
+			this->progressBar1->Size = System::Drawing::Size(100, 23);
+			this->progressBar1->TabIndex = 5;
+			// 
+			// progressBar2
+			// 
+			this->progressBar2->Location = System::Drawing::Point(309, 280);
+			this->progressBar2->Name = L"progressBar2";
+			this->progressBar2->Size = System::Drawing::Size(100, 23);
+			this->progressBar2->TabIndex = 6;
+			// 
+			// tempThreshTxt
+			// 
+			this->tempThreshTxt->Location = System::Drawing::Point(323, 41);
+			this->tempThreshTxt->Name = L"tempThreshTxt";
+			this->tempThreshTxt->Size = System::Drawing::Size(100, 20);
+			this->tempThreshTxt->TabIndex = 7;
+			this->tempThreshTxt->Text = tempThreshTxt->Text + " " + "60.00" + " F";
+			this->tempThreshTxt->TextChanged += gcnew System::EventHandler(this, &Sensor::textBox2_TextChanged);
 			// 
 			// Sensor
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(728, 366);
-			this->Controls->Add(this->textBox1);
+			this->Controls->Add(this->tempThreshTxt);
+			this->Controls->Add(this->progressBar2);
+			this->Controls->Add(this->progressBar1);
+			this->Controls->Add(this->tempLvlTxt);
 			this->Controls->Add(this->HumityThreshLbl);
 			this->Controls->Add(this->HumityLbl);
 			this->Controls->Add(this->tempThreshLbl);
@@ -131,5 +173,7 @@ namespace MASSystemGUI {
 			this->PerformLayout();
 
 		}
-	};
+	private: System::Void textBox2_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+	}
+};
 }

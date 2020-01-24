@@ -1,4 +1,7 @@
 #pragma once
+#include <Windows.h>
+#include "PopupForm.h"
+#include "Sensor.h"
 
 namespace MASSystemGUI {
 
@@ -133,7 +136,24 @@ namespace MASSystemGUI {
 #pragma endregion
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 		//sql check function 
-		
+		Sensor sensorform;
+		PopupForm popup;
+		//hiding my form 
+		this->Hide();
+		//opening sensor form
+		sensorform.ShowDialog();
+		//closing myform
+		this->Close();
+	/*
+	if (sqlcheck==true)
+		{
+			sensorform.ShowDialog();
+		}
+		else
+		{
+			popup.ShowDialog();
+		}
+	*/
 	}
 };
 }
