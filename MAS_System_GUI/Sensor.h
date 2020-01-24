@@ -70,6 +70,7 @@ namespace MASSystemGUI {
 	private: System::Windows::Forms::ToolStripMenuItem^ logsToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^ sensorToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^ loginToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^ alarmToolStripMenuItem;
 
 
 
@@ -107,15 +108,16 @@ namespace MASSystemGUI {
 			this->editToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->thresholdToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->userToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->logsToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->sensorToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->loginToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->alarmToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->resetToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox4 = (gcnew System::Windows::Forms::TextBox());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->label2 = (gcnew System::Windows::Forms::Label());
-			this->logsToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->sensorToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->loginToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->menuStrip1->SuspendLayout();
 			this->SuspendLayout();
 			// 
@@ -214,7 +216,7 @@ namespace MASSystemGUI {
 					this->userToolStripMenuItem
 			});
 			this->editToolStripMenuItem->Name = L"editToolStripMenuItem";
-			this->editToolStripMenuItem->Size = System::Drawing::Size(108, 52);
+			this->editToolStripMenuItem->Size = System::Drawing::Size(108, 57);
 			this->editToolStripMenuItem->Text = L"Edit";
 			// 
 			// thresholdToolStripMenuItem
@@ -229,11 +231,43 @@ namespace MASSystemGUI {
 			this->userToolStripMenuItem->Size = System::Drawing::Size(375, 66);
 			this->userToolStripMenuItem->Text = L"User";
 			// 
+			// logsToolStripMenuItem
+			// 
+			this->logsToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(3) {
+				this->sensorToolStripMenuItem,
+					this->loginToolStripMenuItem, this->alarmToolStripMenuItem
+			});
+			this->logsToolStripMenuItem->Name = L"logsToolStripMenuItem";
+			this->logsToolStripMenuItem->Size = System::Drawing::Size(122, 57);
+			this->logsToolStripMenuItem->Text = L"Logs";
+			// 
+			// sensorToolStripMenuItem
+			// 
+			this->sensorToolStripMenuItem->Name = L"sensorToolStripMenuItem";
+			this->sensorToolStripMenuItem->Size = System::Drawing::Size(538, 66);
+			this->sensorToolStripMenuItem->Text = L"Sensor";
+			this->sensorToolStripMenuItem->Click += gcnew System::EventHandler(this, &Sensor::sensorToolStripMenuItem_Click);
+			// 
+			// loginToolStripMenuItem
+			// 
+			this->loginToolStripMenuItem->Name = L"loginToolStripMenuItem";
+			this->loginToolStripMenuItem->Size = System::Drawing::Size(538, 66);
+			this->loginToolStripMenuItem->Text = L"Login";
+			this->loginToolStripMenuItem->Click += gcnew System::EventHandler(this, &Sensor::loginToolStripMenuItem_Click);
+			// 
+			// alarmToolStripMenuItem
+			// 
+			this->alarmToolStripMenuItem->Name = L"alarmToolStripMenuItem";
+			this->alarmToolStripMenuItem->Size = System::Drawing::Size(538, 66);
+			this->alarmToolStripMenuItem->Text = L"Alarm";
+			this->alarmToolStripMenuItem->Click += gcnew System::EventHandler(this, &Sensor::alarmToolStripMenuItem_Click);
+			// 
 			// resetToolStripMenuItem
 			// 
 			this->resetToolStripMenuItem->Name = L"resetToolStripMenuItem";
-			this->resetToolStripMenuItem->Size = System::Drawing::Size(134, 52);
+			this->resetToolStripMenuItem->Size = System::Drawing::Size(134, 57);
 			this->resetToolStripMenuItem->Text = L"Reset";
+			this->resetToolStripMenuItem->Click += gcnew System::EventHandler(this, &Sensor::resetToolStripMenuItem_Click);
 			// 
 			// textBox2
 			// 
@@ -280,28 +314,6 @@ namespace MASSystemGUI {
 			this->label2->Text = L"Smoke Threshold";
 			this->label2->Click += gcnew System::EventHandler(this, &Sensor::label2_Click);
 			// 
-			// logsToolStripMenuItem
-			// 
-			this->logsToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(2) {
-				this->sensorToolStripMenuItem,
-					this->loginToolStripMenuItem
-			});
-			this->logsToolStripMenuItem->Name = L"logsToolStripMenuItem";
-			this->logsToolStripMenuItem->Size = System::Drawing::Size(122, 52);
-			this->logsToolStripMenuItem->Text = L"Logs";
-			// 
-			// sensorToolStripMenuItem
-			// 
-			this->sensorToolStripMenuItem->Name = L"sensorToolStripMenuItem";
-			this->sensorToolStripMenuItem->Size = System::Drawing::Size(538, 66);
-			this->sensorToolStripMenuItem->Text = L"Sensor";
-			// 
-			// loginToolStripMenuItem
-			// 
-			this->loginToolStripMenuItem->Name = L"loginToolStripMenuItem";
-			this->loginToolStripMenuItem->Size = System::Drawing::Size(538, 66);
-			this->loginToolStripMenuItem->Text = L"Login";
-			// 
 			// Sensor
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(19, 37);
@@ -336,6 +348,18 @@ namespace MASSystemGUI {
 
 
 private: System::Void label2_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void loginToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
+	//open login log form
+}
+private: System::Void sensorToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
+	//open sensor log form
+}
+private: System::Void alarmToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
+	//open alarm log form
+}
+private: System::Void resetToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
+	//reset function
 }
 };
 }
