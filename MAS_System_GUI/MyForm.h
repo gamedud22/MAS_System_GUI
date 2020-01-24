@@ -17,7 +17,9 @@ namespace MASSystemGUI {
 	/// </summary>
 	public ref class MyForm : public System::Windows::Forms::Form
 	{
+		
 	public:
+		
 		MyForm(void)
 		{
 			InitializeComponent();
@@ -27,6 +29,7 @@ namespace MASSystemGUI {
 		}
 
 	protected:
+		
 		/// <summary>
 		/// Clean up any resources being used.
 		/// </summary>
@@ -148,12 +151,12 @@ namespace MASSystemGUI {
 #pragma endregion
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 		//sql check function 
-		Sensor sensorform;
+		Sensor sensform;
 		PopupForm popup;
 		//hiding my form 
 		this->Hide();
 		//opening sensor form
-		sensorform.ShowDialog();
+		sensform.ShowDialog();
 		//closing myform
 		this->Close();
 	/*
