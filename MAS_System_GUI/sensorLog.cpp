@@ -1,4 +1,5 @@
-#include "sensorForm.h"
+#include "sensor.h"
+#include "sensorLog.h"
 
 using namespace System;
 using namespace System::Windows::Forms;
