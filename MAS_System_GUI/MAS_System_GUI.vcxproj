@@ -167,6 +167,9 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="alarmLog.resx">
+      <DependentUpon>alarmLog.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="loginLogs.resx">
       <DependentUpon>loginLogs.h</DependentUpon>
     </EmbeddedResource>

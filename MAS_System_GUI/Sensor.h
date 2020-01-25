@@ -10,6 +10,8 @@
 #include <stdio.h>
 #include <sqltypes.h>
 #include "loginLogs.h"
+#include "sensorLog.h"
+#include "alarmLog.h"
 
 
 
@@ -375,9 +377,17 @@ namespace MASSystemGUI {
 	}
 	private: System::Void sensorToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
 		//open sensor log form
+		sensorForm sensorLogForm;
+		this->Hide();
+		sensorLogForm.ShowDialog();
+		this->Close();
 	}
 	private: System::Void alarmToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
 		//open alarm log form
+		alarmLog alarmLogForm;
+		this->Hide();
+		alarmLogForm.ShowDialog();
+		this->Close();
 	}
 	private: System::Void resetToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
 		//reset function
