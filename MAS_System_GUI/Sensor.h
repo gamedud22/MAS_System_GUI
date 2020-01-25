@@ -6,7 +6,8 @@
 #include <string>
 #include <random>
 #include <cstdlib>
-#include <ctime>
+#include <dos.h>
+#include <stdio.h>
 #include <sqltypes.h>
 #include "loginLogs.h"
 
@@ -385,15 +386,17 @@ namespace MASSystemGUI {
 
 	}
 private: System::Void Sensor_Load_1(System::Object^ sender, System::EventArgs^ e) {
+
+	/* all of these are going to have to be invoke methods that will update every 60 seconds*/
+
+	//rand sensor level show
 	smokeLvl = (rand() % 490) + 1;
 	smokeLvlTxt->Text = smokeLvl.ToString() + " PPM";
 	humityLvl = (rand() % 65) + 1;
 	humityLvlTxt->Text = humityLvl.ToString() + " %";
 	tempLvl = (rand() % 99) + 1;
 	tempLvlTxt->Text = smokeLvl.ToString() + " °F";
-	seconds = +1;
-
-
+	//Thresh hold show
 	tempThreshTxt->Text = tempThresh.ToString() + " F";
 	HumityThreshTxt->Text = humityThresh.ToString() + " %";
 	smokeThreshTxt->Text = smokeThresh.ToString() + " PPM";
