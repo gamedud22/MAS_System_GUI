@@ -25,12 +25,7 @@ namespace MASSystemGUI {
 	/// Summary for Sensor
 	/// </summary>
 	public ref class Sensor : public System::Windows::Forms::Form
-	{
-		//these will be the threshold varaibles
-		int tempThresh = 60;
-		int humityThresh = 50;
-		int smokeThresh= 300;
-		int seconds= 0;
+	{	
 	public:
 
 		Sensor(void)
@@ -41,27 +36,19 @@ namespace MASSystemGUI {
 			//
 			//TODO: Add the constructor code here
 			// load the sensors thresh from the sql 
-					smokeLvl = (rand() % 490) + 1;
-					smokeLvlTxt->Text = smokeLvl.ToString() + " PPM";
-					humityLvl = (rand() % 65) + 1;
-					humityLvlTxt->Text = humityLvl.ToString() + " %";
-					tempLvl = (rand() % 99) + 1;
-					tempLvlTxt->Text = smokeLvl.ToString() + " °F";
-					seconds = +1;
-		
-
-			tempThreshTxt->Text = tempThresh.ToString() + " F";
-			HumityThreshTxt->Text = humityThresh.ToString() + " %";
-			smokeThreshTxt->Text = smokeThresh.ToString() + " PPM";
-			
+					
 		}
 
 	protected:
+		//var 
 		double tempLvl;
 		double humityLvl;
 		double smokeLvl;
+		double tempThresh = 60;
+		double humityThresh = 50;
+		double smokeThresh = 300;
+		double seconds = 0;
 
-		
 		/// <summary>
 		/// Clean up any resources being used.
 		/// </summary>
@@ -150,7 +137,6 @@ namespace MASSystemGUI {
 			this->smokeThreshTxt = (gcnew System::Windows::Forms::TextBox());
 			this->smokeLbl = (gcnew System::Windows::Forms::Label());
 			this->label2 = (gcnew System::Windows::Forms::Label());
-			this->Activate();
 			this->menuStrip1->SuspendLayout();
 			this->SuspendLayout();
 			// 
@@ -366,6 +352,7 @@ namespace MASSystemGUI {
 			this->MainMenuStrip = this->menuStrip1;
 			this->Name = L"Sensor";
 			this->Text = L"Sensor";
+			this->Load += gcnew System::EventHandler(this, &Sensor::Sensor_Load_1);
 			this->menuStrip1->ResumeLayout(false);
 			this->menuStrip1->PerformLayout();
 			this->ResumeLayout(false);
@@ -397,10 +384,20 @@ namespace MASSystemGUI {
 	private: System::Void thresholdToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
 
 	}
-	private: System::Void Sensor_Activated(System::Object^ sender, System::EventArgs^ e)
-	{
-		
-	 }
+private: System::Void Sensor_Load_1(System::Object^ sender, System::EventArgs^ e) {
+	smokeLvl = (rand() % 490) + 1;
+	smokeLvlTxt->Text = smokeLvl.ToString() + " PPM";
+	humityLvl = (rand() % 65) + 1;
+	humityLvlTxt->Text = humityLvl.ToString() + " %";
+	tempLvl = (rand() % 99) + 1;
+	tempLvlTxt->Text = smokeLvl.ToString() + " °F";
+	seconds = +1;
 
+
+	tempThreshTxt->Text = tempThresh.ToString() + " F";
+	HumityThreshTxt->Text = humityThresh.ToString() + " %";
+	smokeThreshTxt->Text = smokeThresh.ToString() + " PPM";
+
+}
 };
 }
