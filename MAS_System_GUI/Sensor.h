@@ -442,7 +442,7 @@ private: System::Void exitToolStripMenuItem1_Click(System::Object^ sender, Syste
 	this->Close();
 }
 private: System::Void backgroundWorker1_DoWork(System::Object^ sender, System::ComponentModel::DoWorkEventArgs^ e) {
-
+	void RunWorkerCompleted(System::Object ^ sender, System::ComponentModel::RunWorkerCompletedEventArgs ^ e);
 }
 
 private: System::Void Sensor_FormClosing(System::Object^ sender, System::Windows::Forms::FormClosingEventArgs^ e) {
@@ -459,7 +459,7 @@ private: System::Void backgroundWorker1_RunWorkerCompleted(System::Object^ sende
 private: System::Void backgroundWorker1_DoWork_1(System::Object^ sender, System::ComponentModel::DoWorkEventArgs^ e) {
 }
 	   void DoWork(System::Object^ sender, System::ComponentModel::DoWorkEventArgs^ e);
-	   void RunWorkerCompleted(System::Object^ sender, System::ComponentModel::RunWorkerCompletedEventArgs^ e);
+	   
 };
 }
 
