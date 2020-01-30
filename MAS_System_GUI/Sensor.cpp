@@ -20,3 +20,13 @@ void closefunction()
 	sensor.Hide();
 	sensor.Close();
 }
+
+void MASSystemGUI::Sensor::DoWork(System::Object^ sender, System::ComponentModel::DoWorkEventArgs^ e)
+{
+	throw gcnew System::NotImplementedException();
+}
+
+void MASSystemGUI::Sensor::RunWorkerCompleted(System::Object^ sender, System::ComponentModel::RunWorkerCompletedEventArgs^ e)
+{
+	throw gcnew System::NotImplementedException();
+}
